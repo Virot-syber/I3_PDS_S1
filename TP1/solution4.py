@@ -12,13 +12,23 @@ print(type(10 / 2),"\n")
 def safe_int(text):
     """Turn text into an int; return None when it is not a number."""
     text = text.strip()
-    if text.lstrip("-").isdigit():         # "42" or "-42"
+    if text.lstrip("-").isdigit():       
         return int(text)
     try:
-        return int(float(text))            # "3.9" -> 3
+        return int(float(text))      
     except ValueError:
-        return None                        # "abc", "", "12a"
-
+        return None              
+    
 
 for sample in ["42", "-8", "3.9", "abc", ""]:
     print(repr(sample), "->", safe_int(sample))
+
+#part c
+
+num1_str = input("Enter number1: ")
+num2_str = input("Enter number2: ")
+
+if num1_str != None and num2_str != None:
+    print("Your sum for this number is ",safe_int(num1_str) + safe_int(num2_str))
+else :
+    print("Invalid input")
