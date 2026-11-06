@@ -17,10 +17,10 @@ for kwh in [0, 35, 50, 120, 200, 350]:
 
     print(f"{kwh} kwh -> {bill} riel =({usd:.2f} USD)")
 
-con = int(input("Enter your moonthly consumption (kwh): "))
+con = int(input("\nEnter your moonthly consumption (kwh): "))
 bill = electricity_bill(con)
 
-print("\t your electricity bill ","\n","-"*50)
+print("\n\t your electricity bill ","\n","-"*50)
 
 if bill <0:
     print("INVVALID INPUT")
