@@ -23,12 +23,13 @@ def safe_int(text):
 for sample in ["42", "-8", "3.9", "abc", ""]:
     print(repr(sample), "->", safe_int(sample))
 
-#part c
 
-num1_str = input("Enter number1: ")
-num2_str = input("Enter number2: ")
+# Part C
 
-if num1_str != None and num2_str != None:
-    print("Your sum for this number is ",safe_int(num1_str) + safe_int(num2_str))
-else :
+num1 = safe_int(input("Enter number1: "))
+num2 = safe_int(input("Enter number2: "))
+
+if num1 is not None and num2 is not None:
+    print("Your sum for these numbers is", num1 + num2)
+else:
     print("Invalid input")
